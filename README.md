@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡🧠 flashmind
+# ⚡🧠 flashmind — Gemini 3.8 Flash Smart Agent
 
 **Make Gemini 3.8 Flash remember, plan, verify — and eliminate hallucinations.**
 
