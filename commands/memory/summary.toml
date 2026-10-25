@@ -1,0 +1,6 @@
+description = "Save a summary of this session to memory"
+prompt = """
+Call `mem_session_summary` (Engram) with a concise summary of this session:
+goal, what was done, decisions made, bugs fixed (cause + fix), files touched, and what is left.
+If Engram is unavailable, save the same summary with `memory_save` (category: project). {{args}}
+"""

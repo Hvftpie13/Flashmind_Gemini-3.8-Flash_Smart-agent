@@ -1,0 +1,7 @@
+description = "Forget a memory"
+prompt = """
+The user wants to forget: {{args}}
+
+Search memory, show the matching entries, then delete only those that truly match the request.
+Report what was deleted.
+"""

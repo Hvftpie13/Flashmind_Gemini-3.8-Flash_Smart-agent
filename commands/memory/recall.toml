@@ -1,0 +1,10 @@
+description = "Recall everything memory knows about a topic"
+prompt = """
+Search memory for the topic below. Use `mem_search` (Engram) — or `memory_search` if Engram is unavailable —
+and try 2–3 keyword variations:
+
+{{args}}
+
+Summarize ONLY what is in memory, cite where each point came from, and state clearly what is unknown.
+Do not add anything from guesses.
+"""

@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "engram": {
+      "command": "engram",
+      "args": [
+        "mcp",
+        "--tools=agent"
+      ]
+    },
+    "flashmind": {
+      "command": "node",
+      "args": [
+        "/PATH/TO/flashmind/server/index.js"
+      ]
+    }
+  }
+}

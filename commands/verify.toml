@@ -1,0 +1,13 @@
+description = "Check the last answer for hallucinations"
+prompt = """
+Review your previous answer (or this text, if given: {{args}}).
+
+For every factual claim:
+1. Name its source: a file you read, tool output, a web result, a memory — or NONE.
+2. Code claims (functions, files, flags, packages) → open the file / check the installed version.
+3. Claims that change over time (versions, prices, APIs) → verify with web search when available.
+4. Claims about the user or project → search memory.
+
+Output a table: Claim | Status (Verified / Assumption / Wrong) | Source.
+Then write a corrected answer. Do not keep claims that have no source.
+"""

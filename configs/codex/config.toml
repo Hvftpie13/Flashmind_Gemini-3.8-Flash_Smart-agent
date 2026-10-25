@@ -1,0 +1,8 @@
+# Add to ~/.codex/config.toml
+[mcp_servers.engram]
+command = "engram"
+args = ["mcp", "--tools=agent"]
+
+[mcp_servers.flashmind]
+command = "npx"
+args = ["-y", "github:hvftpie13/flashmind"]

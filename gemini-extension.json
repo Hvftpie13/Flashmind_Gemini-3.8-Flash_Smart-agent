@@ -1,0 +1,16 @@
+{
+  "name": "flashmind",
+  "version": "1.0.0",
+  "description": "Persistent memory (Engram + built-in fallback), coding skills, and no-hallucination rules for Gemini 3.8 Flash.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "engram": {
+      "command": "engram",
+      "args": ["mcp", "--tools=agent"]
+    },
+    "flashmind": {
+      "command": "node",
+      "args": ["${extensionPath}${/}server${/}index.js"]
+    }
+  }
+}

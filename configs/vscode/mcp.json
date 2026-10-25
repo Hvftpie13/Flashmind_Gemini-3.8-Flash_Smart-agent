@@ -1,0 +1,20 @@
+{
+  "servers": {
+    "engram": {
+      "type": "stdio",
+      "command": "engram",
+      "args": [
+        "mcp",
+        "--tools=agent"
+      ]
+    },
+    "flashmind": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "github:hvftpie13/flashmind"
+      ]
+    }
+  }
+}

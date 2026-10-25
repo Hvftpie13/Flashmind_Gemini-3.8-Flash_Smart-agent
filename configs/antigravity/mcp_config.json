@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "engram": {
+      "command": "engram",
+      "args": [
+        "mcp",
+        "--tools=agent"
+      ]
+    },
+    "flashmind": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "github:hvftpie13/flashmind"
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+description = "Save something to persistent memory"
+prompt = """
+Save the following to memory with `mem_save` (Engram) — or `memory_save` if Engram is unavailable:
+
+{{args}}
+
+Search first to avoid duplicates; if an older version exists, update it instead (`mem_update` / `memory_update`).
+Use the format: clear title + What / Why / Where / Lesson. Never store passwords, API keys, or tokens.
+Confirm briefly what was saved.
+"""
