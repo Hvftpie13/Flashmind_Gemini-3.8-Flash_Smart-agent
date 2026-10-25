@@ -7,7 +7,7 @@
 Persistent memory via [Engram](https://github.com/Gentleman-Programming/engram) · 4 coding skills · no-hallucination rules
 <br>One plugin for Gemini CLI, Antigravity, Cursor, VS Code, Windsurf, Claude Code, Codex, OpenCode — and any MCP client.
 
-[![test](https://github.com/hvftpie13/flashmind/actions/workflows/test.yml/badge.svg)](https://github.com/hvftpie13/flashmind/actions/workflows/test.yml)
+[![test](https://github.com/Hvftpie13/Flashmind_Gemini-3.8-Flash_Smart-agent/actions/workflows/test.yml/badge.svg)](https://github.com/Hvftpie13/Flashmind_Gemini-3.8-Flash_Smart-agent/actions/workflows/test.yml)
 ![license](https://img.shields.io/badge/license-MIT-blue)
 ![node](https://img.shields.io/badge/node-%E2%89%A518-green)
 ![deps](https://img.shields.io/badge/dependencies-0-brightgreen)
