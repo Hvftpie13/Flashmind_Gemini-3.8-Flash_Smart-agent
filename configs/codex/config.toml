@@ -5,4 +5,4 @@ args = ["mcp", "--tools=agent"]
 
 [mcp_servers.flashmind]
 command = "npx"
-args = ["-y", "github:hvftpie13/flashmind"]
+args = ["-y", "github:GITHUB_USERNAME/flashmind"]

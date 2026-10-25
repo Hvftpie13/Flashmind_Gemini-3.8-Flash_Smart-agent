@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡🧠 flashmind — Gemini 3.8 Flash Smart Agent
+# ⚡🧠 flashmind
 
 **Make Gemini 3.8 Flash remember, plan, verify — and stop making things up.**
 
