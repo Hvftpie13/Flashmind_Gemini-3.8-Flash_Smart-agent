@@ -1,0 +1,6 @@
+node_modules/
+memory.json
+*.tmp-*
+*.corrupt-*
+__pycache__/
+.env
