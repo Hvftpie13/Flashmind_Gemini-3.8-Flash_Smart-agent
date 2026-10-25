@@ -4,7 +4,10 @@ const fs = require("fs");
 const path = require("path");
 const assert = require("assert");
 const ROOT = path.join(__dirname, "..");
-const read = (f) => fs.readFileSync(path.join(ROOT, f), "utf8");
+const read = (f) => fs.readFileSync(path.join(ROOT, f), "utf8")
+  .replace(/^\uFEFF/, "")   // Hapus UTF-8 BOM jika ada
+  .replace(/\r\n/g, "\n")   // Ubah CRLF Windows ke LF
+  .replace(/\r/g, "\n");
 
 // --- Gemini CLI extension manifest
 const ext = JSON.parse(read("gemini-extension.json"));
@@ -46,7 +49,8 @@ const skills = fs.readdirSync(skillsDir).filter((d) => fs.statSync(path.join(ski
 assert.deepEqual(skills.sort(), ["no-invented-code", "plan-first", "systematic-debugging", "verify-before-done"]);
 for (const name of skills) {
   const md = read(`skills/${name}/SKILL.md`);
-  const fm = md.match(/^---\n([\s\S]*?)\n---\n/);
+  // Regex fleksibel yang tahan terhadap format baris Windows & spasi
+  const fm = md.trimStart().match(/^---\s*\n([\s\S]*?)\n---\s*(?:\n|$)/);
   assert.ok(fm, `${name}: missing frontmatter`);
   const get = (k) => (fm[1].match(new RegExp(`^${k}:\\s*(.+)$`, "m")) || [])[1];
   assert.equal(get("name"), name, `${name}: frontmatter name must match folder`);
