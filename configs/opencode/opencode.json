@@ -15,7 +15,7 @@
       "command": [
         "npx",
         "-y",
-        "github:GITHUB_USERNAME/flashmind"
+        "github:Hvftpie13/Flashmind_Gemini-3.8-Flash_Smart-agent"
       ],
       "enabled": true
     }

@@ -26,7 +26,7 @@ Fast AI models are incredible coding partners until they:
 
 **Flashmind solves this with three integrated layers:**
 
-1. 🧠 **Shared Memory (Engram MCP)**: Automatically recalls previous project bugs and decisions at the start of a task, and saves new lessons before closing. All editors share one local database.
+1. 🧠 **Shared Memory (Engram MCP)**: Automatically recalls previous project bugs and decisions at the start of a task, and saves new lessons before closing. Reviews overdue memories (`mem_review`) against the current code before trusting them. All editors share one local database.
 2. 🛡️ **Anti-Hallucination Rules (`GEMINI.md`)**: Enforces citing code evidence, separating facts from assumptions, and admitting unknowns.
 3. 🎯 **Proactive Agent Skills**: Step-by-step playbooks loaded on-demand for planning, debugging, and verification.
 
@@ -115,6 +115,32 @@ Loaded automatically when relevant to your current prompt:
 | `/memory:forget <item>` | Delete outdated memories |
 | `/memory:summary` | Generate and record a session summary |
 | `/verify` | Audit the last answer claim-by-claim with source evidence |
+
+---
+
+## 🔄 Updating
+
+Updating never touches your memories: they live in `~/.engram/` and `~/.flashmind/`. See [CHANGELOG.md](CHANGELOG.md) for what changed.
+
+| How you installed | How to update |
+|---|---|
+| **Gemini CLI extension** | `gemini extensions update flashmind` (or `gemini extensions update --all`). It updates in place, so do **not** run `install` again. If it cannot find the source (e.g. you installed under the old repo name), run `gemini extensions uninstall flashmind`, then install again from the current URL. |
+| **NPX** | Restart your editor. If it keeps running an old version, clear npx's cached copy with `npm cache clean --force` and restart. |
+| **Automated installer / git clone** | `cd flashmind && git pull`, then run `./install.sh` (macOS/Linux) or `.\install.ps1` (Windows) again. Skills are overwritten by name, not duplicated. |
+| **Manual config files** | Re-copy from [`configs/`](configs) and **replace**, never append (see below). |
+| **Engram** | `brew upgrade engram`, or re-run `go install github.com/Gentleman-Programming/engram/v3/cmd/engram@latest`. |
+
+**Avoiding duplicates**
+
+- **One entry per server.** Keep a single `"flashmind"` and a single `"engram"` key in your MCP config. Edit the existing entry; do not paste a second copy.
+- **Replace rules, don't append.** For Cursor, Windsurf and VS Code, overwrite the file with the same name. For a shared file such as `~/.gemini/GEMINI.md` or `CLAUDE.md`, wrap the rules in markers the first time you paste them, and replace everything between the markers on each update:
+  ```
+  <!-- flashmind:start -->
+  ...contents of AGENTS.md...
+  <!-- flashmind:end -->
+  ```
+- **One copy of the skills.** If you copied `skills/` into more than one folder (for example `~/.gemini/skills` and `~/.agents/skills`), keep one and delete the other.
+- **Start a new session** after updating so the agent loads the new rules and skills.
 
 ---
 

@@ -22,6 +22,14 @@ You have permanent memory through the Engram MCP tools (`mem_search`, `mem_conte
 4. **END OF SESSION** or after the context is compacted: call `mem_session_summary` with a summary of the work.
 5. Never save passwords, API keys, or tokens to memory.
 
+### Stale memory
+Memories go out of date. Never let an old preference or decision override what the code says today.
+- At the start of a task, after `mem_context`, call `mem_review` with `action: "list"`.
+  If an overdue memory is relevant to the task, verify it against the current code and config before relying on it.
+- Still true: call `mem_review` with `action: "mark_reviewed"` and its `observation_id`.
+- Outdated: replace it with `mem_update`, or `mem_save` the new version and judge the conflict as `supersedes` with `mem_judge`.
+- If the user's latest instruction contradicts a memory, follow the user and update the memory.
+
 ### Fallback when Engram is not available
 If the `mem_*` tools are missing (Engram not installed), use the `memory_*` tools from the **flashmind** server
 with the same rules: `memory_context` + `memory_search` at the start of a task, `memory_save` after important decisions.

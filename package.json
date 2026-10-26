@@ -1,6 +1,6 @@
 {
   "name": "flashmind",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Persistent memory (Engram), coding skills, and no-hallucination rules for Gemini 3.8 Flash — works in Gemini CLI, Antigravity, Cursor, VS Code, Claude Code and any MCP client.",
   "main": "server/index.js",
   "bin": {

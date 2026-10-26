@@ -6,7 +6,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const USER = process.argv[2] || process.env.GITHUB_USERNAME || "GITHUB_USERNAME";
-const REPO = "flashmind";
+const REPO = "Flashmind_Gemini-3.8-Flash_Smart-agent";
 const OUT = path.join(ROOT, "configs");
 const rules = fs.readFileSync(path.join(ROOT, "GEMINI.md"), "utf8");
 

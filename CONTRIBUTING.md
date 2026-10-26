@@ -5,7 +5,7 @@ Thanks for helping make flashmind better!
 ## Setup
 
 ```bash
-git clone https://github.com/hvftpie13/flashmind
+git clone https://github.com/Hvftpie13/Flashmind_Gemini-3.8-Flash_Smart-agent
 cd flashmind
 npm test
 ```

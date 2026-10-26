@@ -22,6 +22,7 @@ for (const s of [
   "At the start of a task, search Engram for relevant memories; after an important decision, save it to Engram.",
   "## Memory (Engram)",
   "mem_context", "mem_search", "mem_save", "mem_session_summary",
+  "mem_review", "mark_reviewed", "### Stale memory",
   "What / Why / Where / Lesson",
   "Never save passwords, API keys, or tokens to memory.",
 ]) assert.ok(rules.includes(s), "rules missing: " + s);
